@@ -1,9 +1,8 @@
 # Check whether symbolic link fails
 def symlink_fail(path):
-if not os.path.exists(os.readlink(path)):
-    print 'path %s is a broken symlink' % path
-
-return os.path.exists(os.readlink(path))
+    if not os.path.exists(os.readlink(path)):
+        print('path %s is a broken symlink' % path)
+    return os.path.exists(os.readlink(path))
 
 # Loop over all DCP2 symbolic links
 
